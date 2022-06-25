@@ -35,9 +35,8 @@ Feature: Validar información de empleados  usando Serenity Rest
 
   @Delete
   Scenario: Eliminar un empleado por id
-    When se busca el empleado a eliminar por
-      | id |
-      | 5  |
+    When se busca el empleado a eliminar con el id 7
+
     Then se observa el mensaje de eliminación
-      | mensaje                               |
-      | Successfully! Record has been deleted |
+      | data | status  | message                               |
+      | 7    | success | Successfully! Record has been deleted |

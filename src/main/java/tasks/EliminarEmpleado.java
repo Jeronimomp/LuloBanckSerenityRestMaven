@@ -10,9 +10,9 @@ import utils.Constantes;
 import static utils.Constantes.PATH_DELETE_EMPLOYEE;
 
 public class EliminarEmpleado implements Task {
-    private String id;
+    private int id;
 
-    public EliminarEmpleado(String id) {
+    public EliminarEmpleado(int id) {
         this.id = id;
     }
 
@@ -27,7 +27,7 @@ public class EliminarEmpleado implements Task {
         SerenityRest.lastResponse().prettyPrint();
 
     }
-    public static EliminarEmpleado porId(String id){
+    public static EliminarEmpleado porId(int id){
         return Tasks.instrumented(EliminarEmpleado.class, id);
     }
 }
